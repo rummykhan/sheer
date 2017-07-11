@@ -22,6 +22,13 @@ I created this framework just to understand dependency management, This is not f
 
 `Browser: http://localhost:1234`
 
+
+### TODO
+
+* Use PSR Compatible Request and Response.
+* Add middleware support.
+* Add View Engine.
+
 ### Contact
 rummykhan(<a href="mailto:rehan_manzoor@outlook.com">rehan_manzoor@outlook.com</a>)
 

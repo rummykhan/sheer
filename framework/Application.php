@@ -59,8 +59,8 @@ class Application extends Container
     {
         $aliases = [
             'app' => $this,
-            'request' => 'App\Sheer\Request',
-            'router' => 'App\Sheer\Router'
+            'request' => 'Sheer\Request',
+            'router' => 'Sheer\Router'
         ];
 
         foreach ($aliases as $alias => $class) {
