@@ -4,7 +4,7 @@
 require '../vendor/autoload.php';
 
 // Create Main Application Container
-$application = new \App\Sheer\Application();
+$application = new Sheer\Application();
 
 // Create Exception Handler for the Application
 $handler = new \App\Exceptions\Handler();

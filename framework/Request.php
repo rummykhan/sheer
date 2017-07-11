@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Sheer;
+namespace Sheer;
 
 /**
  * Class Request
- * @package App\Core
+ * @package Core
  */
 class Request
 {

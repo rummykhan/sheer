@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Sheer;
+namespace Sheer;
 
 use Exception;
 
 /**
  * Class Response
- * @package App\Core
+ * @package Sheer
  */
 class Response
 {

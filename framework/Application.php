@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sheer;
+namespace Sheer;
 
 /**
  * Class Application

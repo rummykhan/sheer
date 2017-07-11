@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Sheer;
+namespace Sheer;
 
-use App\Sheer\Support\Collection;
+use Sheer\Support\Collection;
 use Exception;
 
 /**
  * Class Router
- * @package App\Core
+ * @package Core
  */
 class Router
 {

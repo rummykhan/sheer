@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Sheer\Support;
+namespace Sheer\Support;
 
 /**
  * Class Str
- * @package App\Sheer\Support
+ * @package Sheer\Support
  */
 class Str
 {

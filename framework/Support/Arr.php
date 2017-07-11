@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Sheer\Support;
+namespace Sheer\Support;
 
 
 /**
  * Class Arr
- * @package App\Sheer\Support
+ * @package Sheer\Support
  */
 class Arr
 {

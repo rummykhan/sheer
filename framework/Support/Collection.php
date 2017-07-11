@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Sheer\Support;
+namespace Sheer\Support;
 
 use Exception;
 
 /**
  * Class Collection
- * @package App\Sheer\Support
+ * @package Sheer\Support
  */
 class Collection
 {

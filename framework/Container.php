@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Sheer;
+namespace Sheer;
 
 use Exception;
 use ReflectionClass;
 
 /**
  * Class Container
- * @package App\Core
+ * @package Sheer
  */
 abstract class Container
 {
