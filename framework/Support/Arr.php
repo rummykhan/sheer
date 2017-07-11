@@ -113,4 +113,28 @@ class Arr
     {
         return Arr::isExists($item, $field) && strpos($item[$field], $value) !== false;
     }
+
+    /**
+     * Get Value from array using dot notation.
+     *
+     * @param $arr
+     * @param $path
+     * @param null $default
+     *
+     * @return mixed|null
+     */
+    public static function getValue($arr, $path, $default = null)
+    {
+        @list($index, $key) = explode('.', $path, 2);
+
+        if (!isset($arr[$index])) {
+            return $default;
+        }
+
+        if (strlen($key) > 0) {
+            return static::getValue($arr[$index], $key, $default);
+        }
+
+        return isset($arr[$index]) ? $arr[$index] : $default;
+    }
 }

@@ -44,6 +44,9 @@ abstract class Container
             throw new Exception("{$class} Class not found.");
         }
 
+        // here we can add cache for the objects that are core to the frameworks we object is there we can return that
+        // if object is not there we have to create an object and then return.
+
         // Get reflector for for the class
         $reflector = new ReflectionClass($class);
 

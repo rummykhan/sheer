@@ -57,15 +57,9 @@ class Application extends Container
      */
     private function bootstrap()
     {
-        $aliases = [
-            'app' => $this,
-            'request' => 'Sheer\Request',
-            'router' => 'Sheer\Router'
-        ];
+        foreach ($this->getAliases() as $alias => $class) {
 
-        foreach ($aliases as $alias => $class) {
-
-            if( !is_object($class) ){
+            if (!is_object($class)) {
                 // Add an instance to the instances array
                 $this->addInstance($alias, $this->build($class));
                 continue;
@@ -97,7 +91,7 @@ class Application extends Container
     public function get($name)
     {
         // if we have the object already no need to create another
-        if( isset($this->instances[$name]) ){
+        if (isset($this->instances[$name])) {
             return $this->instances[$name];
         }
 
@@ -109,5 +103,19 @@ class Application extends Container
 
         // return object
         return $instance;
+    }
+
+    /**
+     * Get Core Aliases.
+     *
+     * @return array
+     */
+    public function getAliases()
+    {
+        return [
+            'app' => $this,
+            'request' => 'Sheer\Request',
+            'router' => 'Sheer\Router'
+        ];
     }
 }
