@@ -1,13 +1,14 @@
 <?php
 
-namespace Sheer;
+namespace Sheer\Router;
 
+use Sheer\Request;
 use Sheer\Support\Collection;
 use Exception;
 
 /**
  * Class Router
- * @package Core
+ * @package App\Core
  */
 class Router
 {
