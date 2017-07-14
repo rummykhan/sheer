@@ -14,12 +14,53 @@ class Application extends Container
     protected $instances = [];
 
     /**
+     * @string base path.
+     */
+    protected $basePath = null;
+
+    /**
+     * @string application path.
+     */
+    protected $appPath = null;
+
+    /**
+     * @string version.
+     */
+    protected $version = '1.0.0';
+
+    /**
+     * @string version.
+     */
+    protected $startTime = null;
+
+    /**
+     * App Contracts to Concrete Bindings
+     */
+    protected $bindings = [];
+
+    /**
+     * Application packages.
+     */
+    protected $packages = [];
+
+    /**
      * Application constructor.
      */
-    public function __construct()
+    public function __construct($basePath)
     {
+        // Set base path
+        $this->setBasePath($basePath);
+
+        // Set App Path
+        $this->setAppPath($this->getBasePath());
+
         // Bootstrap the application services.
         $this->bootstrap();
+    }
+
+    public function initialize()
+    {
+        $this->startTime = time();
     }
 
     /**
@@ -115,7 +156,39 @@ class Application extends Container
         return [
             'app' => $this,
             'request' => 'Sheer\Request',
-            'router' => 'Sheer\Router'
+            'router' => 'Sheer\Router\Router'
         ];
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBasePath()
+    {
+        return $this->basePath;
+    }
+
+    /**
+     * @param mixed $basePath
+     */
+    public function setBasePath($basePath)
+    {
+        $this->basePath = "{$basePath}\\";
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAppPath()
+    {
+        return $this->appPath;
+    }
+
+    /**
+     * @param mixed $appPath
+     */
+    public function setAppPath($appPath)
+    {
+        $this->appPath = "{$appPath}app\\";
     }
 }
